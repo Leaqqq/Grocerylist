@@ -1,6 +1,6 @@
 package com.example.grocerylist;
 
-public class Vare {
+public class VareKlasse {
 
     public String vareNavn;
     public boolean erStandardVare;
@@ -8,7 +8,7 @@ public class Vare {
     public String kommentar;
 
     //Constructor, only name and a bool to check whether or not the ware is standard is always necessary.
-    public Vare(String vareNavn, boolean erStandardVare) {
+    public VareKlasse(String vareNavn, boolean erStandardVare) {
         this.vareNavn = vareNavn;
         this.erStandardVare = erStandardVare;
     }
