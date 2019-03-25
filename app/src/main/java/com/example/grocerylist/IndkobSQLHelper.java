@@ -42,7 +42,11 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
             db.execSQL("CREATE TABLE VAREKLASSE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "VARENAVN TEXT)");
+                    + "VARENAVN TEXT," +
+                    "ANTAL INTEGER, "+
+                    "ERSTANDARD INTEGER NOT NULL,"+
+                    "KOMMENTAR TEXT)");
+
             db.execSQL("CREATE TABLE INDKOBSLISTEKLASSE (_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "NAVN TEXT)");
 

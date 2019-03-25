@@ -2,15 +2,22 @@ package com.example.grocerylist;
 
 public class VareKlasse {
 
+    public long id;
     public String vareNavn;
-    public boolean erStandardVare;
+    public int erStandardVare;
     public int antal;
     public String kommentar;
 
     //Constructor, only name and a bool to check whether or not the ware is standard is always necessary.
-    public VareKlasse(String vareNavn, boolean erStandardVare) {
+    public VareKlasse(String vareNavn,int erStandardVare,int antal,String kommentar){
+    this(-1,vareNavn,erStandardVare,antal,kommentar);
+    }
+    public VareKlasse(long id,String vareNavn, int erStandardVare,int antal,String kommentar) {
+        this.id=id;
         this.vareNavn = vareNavn;
         this.erStandardVare = erStandardVare;
+        this.antal=antal;
+        this.kommentar=kommentar;
     }
 
     //Getters and Setters
@@ -22,11 +29,11 @@ public class VareKlasse {
         return this.vareNavn;
     }
 
-    public boolean getErStandardVare() {
+    public int getErStandardVare() {
         return this.erStandardVare;
     }
 
-    public void setErStandardVare(boolean erStandardVare) {
+    public void setErStandardVare(int erStandardVare) {
         this.erStandardVare = erStandardVare;
     }
 
