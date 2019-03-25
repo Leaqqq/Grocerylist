@@ -6,11 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:scrollbars="horizontal"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/layout"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        app:tabSelectedTextColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="56dp"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabIndicatorColor="@android:color/darker_gray">
 
+        <android.support.design.widget.TabItem
+            android:id="@+id/vareliste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vareliste" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/Standardindkobsliste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standard indkøbsliste" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/Navngivetliste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navngivet indkøbsliste" />
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="412dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        tools:layout_editor_absoluteY="134dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link VareListe.OnFragmentInteractionListener} interface
+ * {@link standardlisteFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link VareListe#newInstance} factory method to
+ * Use the {@link standardlisteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class VareListe extends Fragment {
+public class standardlisteFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class VareListe extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public VareListe() {
+    public standardlisteFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class VareListe extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment VareListe.
+     * @return A new instance of fragment indkobslisteFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static VareListe newInstance(String param1, String param2) {
-        VareListe fragment = new VareListe();
+    public static standardlisteFragment newInstance(String param1, String param2) {
+        standardlisteFragment fragment = new standardlisteFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +64,7 @@ public class VareListe extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vare_liste, container, false);
+        return inflater.inflate(R.layout.indkobslisteFragment, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
