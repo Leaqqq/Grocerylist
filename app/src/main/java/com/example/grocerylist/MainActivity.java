@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar4);
-        toolbar.setTitle("Indkøbsliste App");
+        toolbar.setTitle("Indkøbs App");
         setSupportActionBar(toolbar);
 
         tabLayout = findViewById(R.id.layout);
@@ -37,21 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
         PagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(PagerAdapter);
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+        {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-             //   viewPager.setCurrentItem(tab.getPosition());
-            //    if(tab.getPosition() == 1) {
-           //         toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
-          //          tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
-         //       } else if(tab.getPosition() == 2) {
-           //         toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,android.R.color.darker_gray));
-          //          tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,android.R.color.darker_gray));
-          //      } else {
-         //           toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-        ////            tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
-        //        }
+
             }
 
             @Override
