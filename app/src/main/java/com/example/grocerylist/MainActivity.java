@@ -2,10 +2,12 @@ package com.example.grocerylist;
 
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
-import android.widget.Toolbar;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar4);
         toolbar.setTitle("Indkøbsliste App");
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         tabLayout = findViewById(R.id.layout);
         tabVareliste = findViewById(R.id.vareliste);
@@ -39,7 +41,17 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+             //   viewPager.setCurrentItem(tab.getPosition());
+            //    if(tab.getPosition() == 1) {
+           //         toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
+          //          tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimaryDark));
+         //       } else if(tab.getPosition() == 2) {
+           //         toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,android.R.color.darker_gray));
+          //          tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,android.R.color.darker_gray));
+          //      } else {
+         //           toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+        ////            tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
+        //        }
             }
 
             @Override
@@ -52,5 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
+
+
 }
