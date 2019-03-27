@@ -27,13 +27,13 @@
             android:text="Vareliste" />
 
         <android.support.design.widget.TabItem
-            android:id="@+id/Standardindkobsliste"
+            android:id="@+id/standardindkobsliste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Standard indkøbsliste" />
 
         <android.support.design.widget.TabItem
-            android:id="@+id/Navngivetliste"
+            android:id="@+id/navngivetliste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Navngivet indkøbsliste" />
