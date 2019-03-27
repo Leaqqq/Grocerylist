@@ -27,6 +27,7 @@ public class varelisteFragment extends Fragment {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.varelistemenu) {
@@ -38,6 +39,9 @@ public class varelisteFragment extends Fragment {
             return false;
         }
     }
+=======
+
+>>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc
 =======
 
 >>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc

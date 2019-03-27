@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+<<<<<<< HEAD
 
 
     public void navngivetlisteButtonClick(MenuItem item) {
@@ -84,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
     public void varelisteButtonClick(MenuItem item) {
 
     }
+=======
+>>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc
 
 
 }
