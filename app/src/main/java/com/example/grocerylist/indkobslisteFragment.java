@@ -8,7 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Toast;
 
 
 public class indkobslisteFragment extends Fragment {
@@ -26,8 +26,15 @@ public class indkobslisteFragment extends Fragment {
         inflater.inflate(R.menu.navngivetliste_menu,menu);
     }
 
-    //   @Override
-  //  public boolean onOptionsItemSelected(MenuItem item) {
-   //     if(item.getItemId() == R.id.)
-   // }
+       @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.Navngivetlistemenu) {
+
+            //Skab activity med intent
+                return true;
+
+        } else {
+            return false;
+        }
+    }
 }
