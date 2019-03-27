@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.varelistemenu:
                 Intent intent1 = new Intent(this,OpretVare.class);
                 startActivity(intent1);
+                Log.d("Log","test");
                 return true;
 
             case R.id.Navngivetlistemenu:

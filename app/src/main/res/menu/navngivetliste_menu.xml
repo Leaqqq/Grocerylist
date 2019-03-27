@@ -6,7 +6,6 @@
     <item
         android:id="@+id/Navngivetlistemenu"
         android:icon="@drawable/ic_playlist_add_black_24dp"
-        android:onClick="navngivetlisteButtonClick"
         android:title="Tilføj ny indkobsliste"
         android:visible="true"
         app:showAsAction="always" />

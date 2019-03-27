@@ -36,16 +36,16 @@
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="197dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Tilbage" />
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="197dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="0dp"
                 android:text="Opret vare" />
         </LinearLayout>
 
