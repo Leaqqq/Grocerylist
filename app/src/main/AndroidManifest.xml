@@ -19,6 +19,12 @@
         <activity android:name=".OpretVare">
 
         </activity>
+        <activity android:name=".OpretNavngivetListe">
+
+        </activity>
+        <activity android:name=".OpretStandardListe">
+
+        </activity>
     </application>
 
 </manifest>

@@ -63,16 +63,24 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.varelistemenu:
-                Intent intent=new Intent(this,OpretVare.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(this,OpretVare.class);
+                startActivity(intent1);
                 return true;
 
+            case R.id.Navngivetlistemenu:
+                Intent intent2 = new Intent(this,OpretNavngivetListe.class);
+                startActivity(intent2);
+                return true;
+
+            case R.id.Standardindkobsliste:
+                Intent intent3 = new Intent(this,OpretStandardListe.class);
+                startActivity(intent3);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
     }
-<<<<<<< HEAD
 
 
     public void navngivetlisteButtonClick(MenuItem item) {
@@ -85,8 +93,5 @@ public class MainActivity extends AppCompatActivity {
     public void varelisteButtonClick(MenuItem item) {
 
     }
-=======
->>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc
-
 
 }

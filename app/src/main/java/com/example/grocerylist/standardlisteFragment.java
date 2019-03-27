@@ -24,17 +24,6 @@ public class standardlisteFragment extends Fragment {
         inflater.inflate(R.menu.standardliste_menu,menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.Standardindkobsliste) {
-
-            //Skab activity med intent
-            return true;
-
-        } else {
-            return false;
-        }
-    }
 }
 
 

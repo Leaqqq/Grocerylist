@@ -26,23 +26,5 @@ public class varelisteFragment extends Fragment {
         inflater.inflate(R.menu.vareliste_menu, menu);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.varelistemenu) {
 
-            //Skab activity med intent
-            return true;
-
-        } else {
-            return false;
-        }
-    }
-=======
-
->>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc
-=======
-
->>>>>>> 8695d0d3c125f487fb0f09206e0d722a03a636cc
 }
