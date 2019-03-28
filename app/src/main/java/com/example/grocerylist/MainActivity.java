@@ -10,6 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem tabVareliste;
     TabItem tabStandardliste;
     TabItem tabIndkøbsliste1;
-
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +36,32 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         IndkobSQLHelper.setApplicationContext(this);
         IndkobSQLHelper db=IndkobSQLHelper.getInstance();
-        Storage storage=Storage.getInstance();
+        final Storage storage = Storage.getInstance();
 
         tabLayout = findViewById(R.id.layout);
         tabVareliste = findViewById(R.id.vareliste);
         tabStandardliste = findViewById(R.id.standardindkobsliste);
         tabIndkøbsliste1 = findViewById(R.id.navngivetliste);
         viewPager = findViewById(R.id.viewPager);
+        button = findViewById(R.id.buttonOpretVare);
 
         PagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(PagerAdapter);
 
+        Button button = findViewById(R.id.buttonOpretVare);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText vareNavn = v.findViewById(R.id.editText);
+                EditText antal = v.findViewById(R.id.editText2);
+                String vare = antal.getText().toString() + " " + vareNavn.getText().toString();
+                storage.addVareKlasse(new VareKlasse(vare));
+                varelisteFragment.loadData();
+            }
+        });
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+
+
         {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -86,10 +103,45 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        Log.d("Button click", "addAction:  button Clicked");
+    LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+    final View dialogView = inflater.inflate(R.layout.dialog_add, null);
+        dialog.setView(R.layout.dialog_add);
+        dialog.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            Dialog d1 = (Dialog)dialog;
+            TextView inputName = d1.findViewById(R.id.dialog_name);
 
+            if(position == 0){
+                Log.d("ShoppingList Name", "onClick: " + inputName.toString());
+                String name = inputName.getText().toString();
+                dialog.dismiss();
+                Log.d("Dialog dismissed", "onClick: " + name);
+                storage.insertShoppingList(new ShoppingList(name));
+                ShoppinglistFragment.loadData();
 
+            }
+            if(position == 1){
+                Log.d("Product Name", "onClick: " + inputName.getText());
+                String name = inputName.getText().toString();
+                dialog.dismiss();
+                storage.insertProduct(new Product(name));
+                ProductListFragment.loadData();
+//
+            }
 
-
-
-
+        }
+    });
+        if(position == 0){
+        dialog.setTitle("Add ShoppingList");
+    }
+        if(position == 1){
+        dialog.setTitle("Add Product");
+    }
+        dialog.setNegativeButton("cancel", null);
+        dialog.show();
 }
+}
+

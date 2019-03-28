@@ -54,5 +54,8 @@ public class varelisteFragment extends ListFragment {
         inflater.inflate(R.menu.vareliste_menu, menu);
     }
 
+    public void loadData() {
+        
+    }
 
 }
