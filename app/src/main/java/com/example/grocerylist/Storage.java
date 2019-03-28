@@ -46,12 +46,19 @@ public class Storage {
         return db.insert("VAREKLASSE", null, vareValues);
 
     }
+    public long addIndkoblisteKlasse(IndkobslisteKlasse indkobslisteKlasse){
+        SQLiteDatabase db= indkobsqlhelper.getWritableDatabase();
+        ContentValues indkoblisteValues=new ContentValues();
+        indkoblisteValues.put("NAVN",indkobslisteKlasse.getNavn());
+        return db.insert("INDKOBSLISTEKLASSE",null,indkoblisteValues);
+    }
 
     private void initStorage() {
         if (getVarer().getCount() == 0) {
-            addVareKlasse(new VareKlasse("Agurk", 1, 3, "Frugt"));
-            addVareKlasse(new VareKlasse("Løg", 1, 2, "Grøntsag"));
-            addVareKlasse(new VareKlasse("Agurk2",1,4,"Frugt"));
+            addVareKlasse(new VareKlasse("Agurk", 3, 1, "Frugt"));
+            addVareKlasse(new VareKlasse("Løg", 4, 1, "Grøntsag"));
+            addVareKlasse(new VareKlasse("Agurk2",22,1,"Frugt"));
+
         }
     }
     /*private void initStorage() {

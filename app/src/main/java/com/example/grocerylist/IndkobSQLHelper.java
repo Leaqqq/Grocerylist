@@ -17,7 +17,6 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
     }
 
 
-
     private IndkobSQLHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -31,7 +30,7 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        updateMyDatabase(db,0,DB_VERSION);
+        updateMyDatabase(db, 0, DB_VERSION);
 
     }
 
@@ -44,16 +43,17 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
         if (oldVersion < 1) {
             db.execSQL("CREATE TABLE VAREKLASSE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + "VARENAVN TEXT," +
-                    "ANTAL INTEGER, "+
-                    "ERSTANDARD INTEGER NOT NULL,"+
+                    "ANTAL INTEGER, " +
+                    "ERSTANDARD INTEGER NOT NULL," +
                     "KOMMENTAR TEXT)");
 
             db.execSQL("CREATE TABLE INDKOBSLISTEKLASSE (_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "NAVN TEXT)");
 
         }
-        if(oldVersion<2){
-        db.execSQL("ALTER TABLE VAREKLASSE ADD COLUMN FAVOURITE NUMERIC");
+        if (oldVersion < 2) {
+            db.execSQL("ALTER TABLE VAREKLASSE ADD COLUMN FAVOURITE NUMERIC");
+            db.execSQL("ALTER TABLE INDKOBSLISTEKLASSE ADD COLUMN FAVOURITE NUMERIC");
         }
     }
 }

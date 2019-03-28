@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
+            viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.varelistemenu:
                 Intent intent1 = new Intent(this,OpretVare.class);
                 startActivity(intent1);
-                Log.d("Log","test");
+
                 return true;
 
             case R.id.Navngivetlistemenu:

@@ -9,14 +9,14 @@ public class VareKlasse {
     public String kommentar;
 
     //Constructor, only name and a bool to check whether or not the ware is standard is always necessary.
-    public VareKlasse(String vareNavn,int erStandardVare,int antal,String kommentar){
-    this(-1,vareNavn,erStandardVare,antal,kommentar);
+    public VareKlasse(String vareNavn,int antal,int erStandardVare,String kommentar){
+    this(-1,vareNavn,antal,erStandardVare,kommentar);
     }
-    public VareKlasse(long id,String vareNavn, int erStandardVare,int antal,String kommentar) {
+    public VareKlasse(long id,String vareNavn, int antal,int erStandardVare,String kommentar) {
         this.id=id;
         this.vareNavn = vareNavn;
-        this.erStandardVare = erStandardVare;
         this.antal=antal;
+        this.erStandardVare = erStandardVare;
         this.kommentar=kommentar;
     }
 
@@ -54,6 +54,6 @@ public class VareKlasse {
     }
     @Override
     public String toString(){
-        return this.antal+" "+this.vareNavn;
+        return this.antal+" Stk "+this.vareNavn;
     }
 }
