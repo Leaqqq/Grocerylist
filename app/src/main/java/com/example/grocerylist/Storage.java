@@ -13,6 +13,7 @@ public class Storage {
     public static Storage getInstance() {
         if (storage == null) {
             storage = new Storage();
+            storage.initStorage();
         }
         return storage;
     }
@@ -45,9 +46,14 @@ public class Storage {
         return db.insert("VAREKLASSE", null, vareValues);
 
     }
-    private void initStorage(){
-        if(getVarer().getCount()==0){
-        addVareKlasse(new VareKlasse("Agurk",1,3,"Frugt"));
+
+    private void initStorage() {
+        if (getVarer().getCount() == 0) {
+            addVareKlasse(new VareKlasse("Agurk", 1, 3, "Frugt"));
+            addVareKlasse(new VareKlasse("Løg", 1, 2, "Grøntsag"));
+            addVareKlasse(new VareKlasse("Mælk", 1, 4, "IkkeGrøntsag"));
+            addVareKlasse(new VareKlasse("Kød", 1, 6, "Kød"));
+            addVareKlasse(new VareKlasse("Hakkekød", 0, 22, "Kød"));
         }
     }
     /*private void initStorage() {

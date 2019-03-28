@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar4);
         toolbar.setTitle("Indkøbs App");
         setSupportActionBar(toolbar);
+        IndkobSQLHelper.setApplicationContext(this);
+        IndkobSQLHelper db=IndkobSQLHelper.getInstance();
+        Storage storage=Storage.getInstance();
 
         tabLayout = findViewById(R.id.layout);
         tabVareliste = findViewById(R.id.vareliste);

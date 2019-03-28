@@ -52,4 +52,8 @@ public class VareKlasse {
     public String getKommentar() {
         return kommentar;
     }
+    @Override
+    public String toString(){
+        return this.getAntal()+" "+this.vareNavn;
+    }
 }

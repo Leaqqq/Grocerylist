@@ -10,12 +10,13 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "indkob"; // the name of our database
     private static final int DB_VERSION = 2; // the version of the database
     private static Context applicationContext;
+    private static IndkobSQLHelper indkobSQLhelper;
 
     public static void setApplicationContext(Context context) {
         applicationContext = context.getApplicationContext();
     }
 
-    private static IndkobSQLHelper indkobSQLhelper;
+
 
     private IndkobSQLHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -52,7 +53,7 @@ public class IndkobSQLHelper extends SQLiteOpenHelper {
 
         }
         if(oldVersion<2){
-        db.execSQL("ALTER TABLE VARE ADD COLUMN FAVOURITE NUMERIC");
+        db.execSQL("ALTER TABLE VAREKLASSE ADD COLUMN FAVOURITE NUMERIC");
         }
     }
 }

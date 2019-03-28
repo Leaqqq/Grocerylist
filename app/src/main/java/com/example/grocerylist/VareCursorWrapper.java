@@ -9,9 +9,10 @@ public class VareCursorWrapper extends CursorWrapper {
     }
 
     public VareKlasse getVareKlasse() {
-        if (!moveToFirst()) {
+        /*if (!moveToFirst()) {
             return null;
-        }
+        }*/
+        
         long id =getLong(getColumnIndex("_id"));
         String vareNavn=getString(getColumnIndex("VARENAVN"));
         int antal=getInt(getColumnIndex("ANTAL"));
