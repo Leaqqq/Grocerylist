@@ -38,6 +38,7 @@ public class varelisteFragment extends ListFragment {
        while(cursor.moveToNext()){
            theList.add(cursor.getVareKlasse());
            Log.d("LOG KIG HER","VARER: "+cursor.getVareKlasse().vareNavn);
+           Log.d("LOG KIG HER","VARER: "+cursor.getVareKlasse().antal);
        }
        cursor.close();
 
