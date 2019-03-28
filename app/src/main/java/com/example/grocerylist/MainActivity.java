@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.layout);
         tabVareliste = findViewById(R.id.vareliste);
-        tabStandardliste = findViewById(R.id.Standardindkobsliste);
-        tabIndkøbsliste1 = findViewById(R.id.Navngivetliste);
+        tabStandardliste = findViewById(R.id.standardindkobsliste);
+        tabIndkøbsliste1 = findViewById(R.id.navngivetliste);
         viewPager = findViewById(R.id.viewPager);
 
         PagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
                 return true;
 
-            case R.id.Standardindkobsliste:
+            case R.id.standardlistemenu:
                 Intent intent3 = new Intent(this,OpretStandardListe.class);
                 startActivity(intent3);
                 return true;
@@ -88,15 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void navngivetlisteButtonClick(MenuItem item) {
 
-    }
 
-    public void standardlisteButtonClick(MenuItem item) {
-
-    }
-    public void varelisteButtonClick(MenuItem item) {
-
-    }
 
 }
