@@ -54,6 +54,6 @@ public class VareKlasse {
     }
     @Override
     public String toString(){
-        return this.getAntal()+" "+this.vareNavn;
+        return this.antal+" "+this.vareNavn;
     }
 }

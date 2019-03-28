@@ -37,10 +37,11 @@ public class varelisteFragment extends ListFragment {
 
        while(cursor.moveToNext()){
            theList.add(cursor.getVareKlasse());
+           Log.d("LOG KIG HER","VARER: "+cursor.getVareKlasse().vareNavn);
        }
        cursor.close();
 
-        Log.d("LOG KIG HER","VARER: "+Storage.getInstance().getVarer().getVareKlasse().vareNavn);
+
         ArrayAdapter<VareKlasse> adapter=new ArrayAdapter<>(inflater.getContext(),android.R.layout.simple_list_item_1,theList);
         setListAdapter(adapter);
 

@@ -51,9 +51,7 @@ public class Storage {
         if (getVarer().getCount() == 0) {
             addVareKlasse(new VareKlasse("Agurk", 1, 3, "Frugt"));
             addVareKlasse(new VareKlasse("Løg", 1, 2, "Grøntsag"));
-            addVareKlasse(new VareKlasse("Mælk", 1, 4, "IkkeGrøntsag"));
-            addVareKlasse(new VareKlasse("Kød", 1, 6, "Kød"));
-            addVareKlasse(new VareKlasse("Hakkekød", 0, 22, "Kød"));
+            addVareKlasse(new VareKlasse("Agurk2",1,4,"Frugt"));
         }
     }
     /*private void initStorage() {
