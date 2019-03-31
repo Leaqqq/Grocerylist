@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem tabVareliste;
     TabItem tabStandardliste;
     TabItem tabIndkøbsliste1;
+    Storage storage;
 
 
     @Override
@@ -86,9 +89,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
-
 
 
 
