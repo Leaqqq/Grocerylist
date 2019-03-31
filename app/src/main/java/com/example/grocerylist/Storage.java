@@ -41,8 +41,6 @@ public class Storage {
         ContentValues vareValues = new ContentValues();
         vareValues.put("VARENAVN", vareKlasse.getName());
         vareValues.put("ANTAL", vareKlasse.getAntal());
-        vareValues.put("ERSTANDARD", vareKlasse.getErStandardVare());
-        vareValues.put("KOMMENTAR", vareKlasse.getKommentar());
         return db.insert("VAREKLASSE", null, vareValues);
 
     }

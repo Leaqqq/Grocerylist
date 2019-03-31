@@ -39,4 +39,8 @@ public class OpretVare extends AppCompatActivity {
 
     }
 
+            }
+    });
+
+    }
 }

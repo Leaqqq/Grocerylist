@@ -9,15 +9,13 @@ public class VareKlasse {
     public String kommentar;
 
     //Constructor, only name and a bool to check whether or not the ware is standard is always necessary.
-    public VareKlasse(String vareNavn,int antal,int erStandardVare,String kommentar){
-    this(-1,vareNavn,antal,erStandardVare,kommentar);
+    public VareKlasse(String vareNavn,int erStandardVare,int antal,String kommentar){
+
     }
-    public VareKlasse(long id,String vareNavn, int antal,int erStandardVare,String kommentar) {
-        this.id=id;
+    public VareKlasse(String vareNavn) {
+
         this.vareNavn = vareNavn;
-        this.antal=antal;
-        this.erStandardVare = erStandardVare;
-        this.kommentar=kommentar;
+
     }
 
     //Getters and Setters
@@ -54,6 +52,6 @@ public class VareKlasse {
     }
     @Override
     public String toString(){
-        return this.antal+" Stk "+this.vareNavn;
+        return this.antal+" "+this.vareNavn;
     }
 }
