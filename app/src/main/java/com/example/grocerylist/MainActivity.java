@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem tabVareliste;
     TabItem tabStandardliste;
     TabItem tabIndkøbsliste1;
+
     Storage storage;
 
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Storage storage=Storage.getInstance();
 
         tabLayout = findViewById(R.id.layout);
+
         tabVareliste = findViewById(R.id.vareliste);
         tabStandardliste = findViewById(R.id.standardindkobsliste);
         tabIndkøbsliste1 = findViewById(R.id.navngivetliste);
