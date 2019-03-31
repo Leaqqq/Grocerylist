@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.CursorWrapper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,11 +22,10 @@ import java.util.ArrayList;
 
 
 public class varelisteFragment extends ListFragment {
-    private Cursor cursor;
-    private SimpleCursorAdapter listAdapter;
-    private Storage storage;
-    private ArrayList<VareKlasse> theList;
 
+    private ArrayList<VareKlasse> theList;
+    public VareCursorWrapper cursor = Storage.getInstance().getVarer();
+    public ArrayAdapter<VareKlasse> adapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class varelisteFragment extends ListFragment {
 
 
 
-       VareCursorWrapper cursor = Storage.getInstance().getVarer();
+
 
        while(cursor.moveToNext()){
            theList.add(cursor.getVareKlasse());
@@ -43,8 +43,11 @@ public class varelisteFragment extends ListFragment {
        cursor.close();
 
 
-        ArrayAdapter<VareKlasse> adapter=new ArrayAdapter<>(inflater.getContext(),android.R.layout.simple_list_item_1,theList);
+        adapter=new ArrayAdapter<>(inflater.getContext(),android.R.layout.simple_list_item_1,theList);
         setListAdapter(adapter);
+
+
+
 
         setHasOptionsMenu(true);
         return super.onCreateView(inflater,container,savedInstanceState);
@@ -55,8 +58,10 @@ public class varelisteFragment extends ListFragment {
         inflater.inflate(R.menu.vareliste_menu, menu);
     }
 
-    public void loadData() {
-        
+    public void refreshVareliste(){
+       if(adapter!=null){
+           adapter.notifyDataSetChanged();
+       }
     }
-
 }
+

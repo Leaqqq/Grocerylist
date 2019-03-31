@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -39,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         final Storage storage = Storage.getInstance();
 
         tabLayout = findViewById(R.id.layout);
+
         tabVareliste = findViewById(R.id.vareliste);
         tabStandardliste = findViewById(R.id.standardindkobsliste);
         tabIndkøbsliste1 = findViewById(R.id.navngivetliste);
@@ -103,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+<<<<<<< HEAD
+=======
     AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         Log.d("Button click", "addAction:  button Clicked");
     LayoutInflater inflater = MainActivity.this.getLayoutInflater();
@@ -132,16 +134,8 @@ public class MainActivity extends AppCompatActivity {
 //
             }
 
-        }
-    });
-        if(position == 0){
-        dialog.setTitle("Add ShoppingList");
-    }
-        if(position == 1){
-        dialog.setTitle("Add Product");
-    }
-        dialog.setNegativeButton("cancel", null);
-        dialog.show();
 }
+>>>>>>> 8cb0cb10218c59ef501b6473ed789f54afb430d9
 }
+
 

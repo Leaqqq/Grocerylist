@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".OpretVare">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,36 +12,55 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/idVarenavn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="varenavn"
             android:inputType="textPersonName"
             android:padding="20dp"
-            android:text="Varenavn" />
+            android:text="" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/idAntal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Antal"
             android:inputType="textPersonName"
             android:padding="20dp"
-            android:text="Antal" />
+            android:text="" />
 
-        <LinearLayout
-            android:layout_width="390dp"
-            android:layout_height="605dp"
-            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/idStandardvare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Standardvare?(1 for ja)"
+            android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/buttonOpretVare"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:onClick="onClick"
-                android:text="Opret vare" />
-        </LinearLayout>
+        <EditText
+            android:id="@+id/idKommentar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kommentar"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Standard vare" />
+
+        <Button
+            android:id="@+id/opretVare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickOpret"
+            android:text="Opret Vare" />
 
     </LinearLayout>
 </ScrollView>
